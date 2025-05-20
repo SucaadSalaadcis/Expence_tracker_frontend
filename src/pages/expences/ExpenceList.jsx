@@ -13,7 +13,7 @@ const ExpenseTable = () => {
   const navigate = useNavigate();
 
   const getAllData = () => {
-    axios.get('https://expence-tracker-backend-yai4.onrender.com/expences')
+    axios.get('https://exp-trac-backend.onrender.com/expences')
       .then((res) => {
         setExpenses(res.data.data);
       })
@@ -50,7 +50,7 @@ const ExpenseTable = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://expence-tracker-backend-yai4.onrender.com/expence/${id}`)
+          .delete(`https://exp-trac-backend.onrender.com/expence/${id}`)
           .then(() => {
             getAllData();
             Swal.fire("Deleted!", "Your data has been deleted.", "success");

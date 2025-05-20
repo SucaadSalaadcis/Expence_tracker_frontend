@@ -19,7 +19,7 @@ export default function CreateUser() {
             password,
         };
 
-        axios.post('https://expence-tracker-backend-yai4.onrender.com/register', data).then(() => {
+        axios.post('https://exp-trac-backend.onrender.com/register', data).then(() => {
             toast.success("Expense Created Successfully...");
             navigate('/users');
 

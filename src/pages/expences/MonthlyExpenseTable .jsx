@@ -10,7 +10,7 @@ const MonthlyExpenseTable = () => {
   useEffect(() => {
     const fetchReport = async () => {
       try {
-        const res = await axios.get('https://expence-tracker-backend-yai4.onrender.com/monthly_expense_report');
+        const res = await axios.get('https://exp-trac-backend.onrender.com/monthly_expense_report');
         setReport(res.data.data); 
       } catch (err) {
         setError('Failed to load report');
