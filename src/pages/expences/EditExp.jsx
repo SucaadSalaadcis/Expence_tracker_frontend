@@ -14,7 +14,7 @@ export default function EditExp() {
     const navigate = useNavigate();
 
     const handleSingleData = () => {
-        axios.get(`https://exp-trac-backend.onrender.com/expence/${params.id}`)
+        axios.get(`https://exp-trac-backend-1.onrender.com/expence/${params.id}`)
             .then(res => {
                 if (res.data && res.data.expence) {
                     setAmount(res.data.expence.amount);
@@ -47,7 +47,7 @@ export default function EditExp() {
             date,
         };
 
-        axios.put(`https://exp-trac-backend.onrender.com/expence/${params.id}`, data).then(() => {
+        axios.put(`https://exp-trac-backend-1.onrender.com/expence/${params.id}`, data).then(() => {
             navigate("/expenses"); 
              toast.success("Updated Successfully...");
         }).catch((error) => {

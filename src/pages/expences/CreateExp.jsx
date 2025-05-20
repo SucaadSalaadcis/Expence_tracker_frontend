@@ -20,7 +20,7 @@ export default function CreateExp() {
             description,
         };
 
-        axios.post('https://exp-trac-backend.onrender.com/expences', data).then(() => {
+        axios.post('https://exp-trac-backend-1.onrender.com/expences', data).then(() => {
             toast.success("Expense Created Successfully...");
             navigate('/expenses');
 

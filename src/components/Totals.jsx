@@ -8,10 +8,10 @@ export default function Totals() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const usersRes = await axios.get('https://exp-trac-backend.onrender.com/users');
+                const usersRes = await axios.get('https://exp-trac-backend-1.onrender.com/users');
                 setUsersCount(usersRes.data.length);
 
-                const expenseRes = await axios.get('https://exp-trac-backend.onrender.com/expences');
+                const expenseRes = await axios.get('https://exp-trac-backend-1.onrender.com/expences');
                 const expenses = expenseRes.data.data;
                 const total = expenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
                 setExpense(total);

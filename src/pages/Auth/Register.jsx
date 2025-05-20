@@ -15,7 +15,7 @@ export default function Register() {
         e.preventDefault();
         // console.log(name, email, password);
         try {
-            const request = await axios.post("https://exp-trac-backend.onrender.com/register", { name, email, password });
+            const request = await axios.post("https://exp-trac-backend-1.onrender.com/register", { name, email, password });
             const response = request.data;
             if (request.status == 200) {
                 toast.success(response.message);
