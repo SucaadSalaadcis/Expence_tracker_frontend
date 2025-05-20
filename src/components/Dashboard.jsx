@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [reportData, setReportData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/monthly_expense_report') // Adjust your endpoint
+    axios.get('https://expence-tracker-backend-yai4.onrender.com/monthly_expense_report') // Adjust your endpoint
       .then(res => setReportData(res.data.data))
       .catch(err => console.error(err));
   }, []);

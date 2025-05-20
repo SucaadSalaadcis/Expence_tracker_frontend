@@ -14,7 +14,7 @@ export default function Login() {
         e.preventDefault();
         // console.log(name, email, password);
         try {
-            const request = await axios.post("http://localhost:3000/login", { email, password }, { withCredentials: true, });
+            const request = await axios.post("https://expence-tracker-backend-yai4.onrender.com/login", { email, password }, { withCredentials: true, });
             const response = request.data;
             if (request.status == 200) {
                 toast.success(response.message);

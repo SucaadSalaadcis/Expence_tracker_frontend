@@ -9,7 +9,7 @@ const UsersList = () => {
     const navigate = useNavigate();
 
     const getAllData = () => {
-        axios.get('http://localhost:3000/users')
+        axios.get('https://expence-tracker-backend-yai4.onrender.com/users')
             .then((res) => {
                 console.log('API response:', res.data);
                 setUsers(res.data || []);
@@ -49,7 +49,7 @@ const UsersList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios
-                    .delete(`http://localhost:3000/user/${id}`)
+                    .delete(`https://expence-tracker-backend-yai4.onrender.com/user/${id}`)
                     .then(() => {
                         getAllData();
                         Swal.fire("Deleted!", "Your data has been deleted.", "success");

@@ -9,7 +9,7 @@ export default function Logout() {
 
     useEffect(() => {
         // clear the token cookie
-        axios.get('http://localhost:3000/logout', { withCredentials: true })
+        axios.get('https://expence-tracker-backend-yai4.onrender.com/logout', { withCredentials: true })
         .then(res => {
                 Cookies.remove('token');
                 console.log(res.data.message);
